@@ -1,0 +1,651 @@
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: Times, serif,
+  "メイリオ","Meiryo","ＭＳ Ｐゴシック",osaka,monospace;
+  user-select: none;
+  color: #252322; /* デフォルトテキストカラー */
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+li {
+  list-style: none;
+}
+
+p {
+  font-size: 1rem; /* デフォルトフォントサイズ */
+}
+
+/* コンテンツのタイトル共通 */
+.content-title {
+  color: #fff;
+  font-size: 2.5rem; 
+  text-align: center;
+}
+
+/* コンテンツ左右共通 */ 
+.content-padding-lr {
+  padding-left: 25%;
+  padding-right: 25%;
+}
+
+/* コンテンツの上下余白共通 */
+.content-padding-tb {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/* テーブル共通 */
+th, td {
+  text-align: left;
+}
+
+/* ヘッダー */
+.header-title {
+  margin: 0;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: normal;
+  text-align: center;
+  padding: 10px;
+  background: #AF1653;
+}
+
+.header-inner {
+  padding: 5px 15%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.header-logo {
+  margin: auto 0;
+}
+
+.header-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.header-contact p:nth-child(1) {
+  font-size: 0.75rem;
+}
+
+.header-contact-text {
+  display: flex;
+  align-items: center;
+}
+
+.header-contact-text::before,
+.header-contact-text::after {
+    content: "";
+    height: 1px;
+    flex-grow: 1;
+    background-color: rgb(151, 149, 149);
+}
+
+.header-contact-text::before {
+    margin-right: 0.5rem;
+}
+
+.header-contact-text::after {
+    margin-left: 0.5rem;
+}
+
+.header-contact .tel-logo {
+  vertical-align: top;
+  margin-right: 5px;
+  width: 40px;
+}
+
+.header-contact .tel-number {
+  color: #AF1653;
+  font-size: 1.7rem;
+}
+
+.header-contact p:last-child {
+  color: #fff;
+  font-size: 0.75rem;
+  background: #000;
+  padding: 1px 35px 1px 20px;
+}
+/*  */
+
+/* トップイメージ */
+.fv {
+  background: #E5EFF7;
+}
+
+.fv-inner {
+  height: 110vh;
+  background:  url(img/main.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* 上下左右中央寄せ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* fvテキストの共通スタイル */
+.fv-title, .fv-text {
+  color: #AF1653;
+  text-shadow:
+  2px  2px 1px #fff,
+  -2px  2px 1px #fff,
+  2px -2px 1px #fff,
+  -2px -2px 1px #fff,
+  2px  0px 1px #fff,
+  0px  2px 1px #fff,
+  -2px  0px 1px #fff,
+  0px -2px 1px #fff;
+  text-align: center;
+}
+
+/* fvテキストのそれぞれのフォントスタイル */
+/* 最初の見出し */
+.fv-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* 一番大きい見出し */
+.fv-title span {
+  font-size: 4.8rem;
+}
+
+/* 見出しのメッセージ */
+.fv-text {
+  font-size: 1.6rem;
+}
+
+/* fvの中の/装飾 */
+.text-decoration-left, .text-decoration-right {
+  text-shadow: none;
+  display: inline-block;
+  color: white;
+  margin: 0 130px;
+  transform: scale(8, 2);
+}
+/* ここまでトップイメージ */
+
+/* メイン */
+.main-header {
+  background: #AF1653;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+}
+
+.main-text {
+  line-height: 2.5;
+  text-align: center;
+}
+
+/* グリッドで作る画像 */
+.school-images {
+  background: url(img/bg_green.jpg);
+}
+
+.school-images-inner {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px;
+}
+/* ここまでグリッド */
+
+/* イベント */
+.event-contents-title-wrapper {
+  margin: 0 auto;
+  text-align: center;
+  padding: 40px 0;
+  width: 85%;
+  background: url(img/bg_ribon.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.event-sub-text {
+  padding-bottom: 40px;
+  line-height: 2.5;
+  text-align: center;
+}
+
+.content-inner{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative; 
+}
+
+
+.event-text-wrapper {
+  min-width: 60%;
+  position: absolute;
+  left: 40%;
+}
+
+/* 逆レイアウト */
+.reverse{
+  flex-direction: row-reverse;
+}
+
+.reverse .event-text-wrapper {
+  left: 0;
+  right: 350px;
+}
+/*  */
+/* ここまでイベント */
+
+/* 勤務地 */
+
+
+/* 全体 */
+.work-place {
+  background: url(img/bg_wine.png);
+  text-align: center;
+}
+
+.work-place-inner {
+  padding-top: 40px;
+  padding-bottom: 0;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.work-place-inner figcaption {
+  padding-top: 15px;
+}
+
+figcaption p:nth-child(1) {
+  font-size: 1.85rem;
+}
+
+.work-place-img-border, .work-place-img {
+  padding: 0 15px;
+  text-align: left;
+}
+
+/* 中央縦線 */
+.work-place-img-border {
+  border-right: 2px solid #fff;
+}
+
+/* MAPボタン */
+.map-btn {
+  color: #AF1653;
+  background: #fff;
+  float: right;
+  padding: 5px 20px;
+  border-radius: 4px;
+}
+
+.qa-title {
+  text-align: center;
+  color: #AF1653;
+}
+
+.cp_qa *, .cp_qa *:after, .cp_qa *:before {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.cp_qa .cp_actab {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	margin: 0 0 2.5em 0;
+	color: #AF1653;
+}
+
+.cp_qa .cp_actab input {
+	position: absolute;
+	opacity: 0;
+}
+
+/* 質問 */
+.cp_q {
+  background: #E7B9CB;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.cp_q p {
+  font-size: 1.2rem;
+}
+
+/* ボタン */
+.cp_q label {
+  width: 2rem;
+  height: 2rem;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 2rem;
+  border-radius: 50%;
+  background: #AF1653;
+  color: white;
+}
+
+/* 答え */
+.cp_qa .cp_actab .cp_actab-content {
+	position: relative;
+	overflow: hidden;
+	max-height: 0;
+	padding: 0 0 0 2.5em;
+	-webkit-transition: max-height 0.2s;
+	transition: max-height 0.2s;
+  border-radius: 0 0 0.5em 0.5em;
+  color: #3E3A39;
+}
+
+.cp_qa .cp_actab .cp_actab-content p {
+	margin: 1em 1em 1em 0;
+}
+
+/* 質問を開いた時の仕様 */
+/* --答えの高さ */
+.cp_qa .cp_actab input:checked ~ .cp_actab-content {
+	max-height: 40em;
+}
+/* 質問をクリックした時の文字色変化 */
+.cp_qa .cp_actab input:checked ~ .cp_q {
+	color: #3E3A39;
+}
+
+/* 求人案内 */
+
+/* 全体 */
+.employer-apply {
+  background: #344169;
+}
+
+/* それぞれのボックスのサイジングなど */
+.work-detail-wrapper, .form-item-wrapper {
+  width: 55%;
+  background: #fff;
+  margin: 0 auto;
+  padding: 20px 30px;
+}
+
+/* 求人詳細 */
+.work-detail-wrapper {
+  display: flex;
+}
+
+.work-detail-img-wrapper {
+  margin-right: 15px;
+}
+
+.work-detail-img-wrapper p {
+  max-width: 300px;
+}
+.work-detail-img-wrapper p:nth-child(1) {
+  margin-bottom: 20px;
+}
+
+
+
+.work-detail-text {
+  font-size: 0.9rem;
+}
+
+.work-detail-text tr {
+  line-height: 1.8rem;
+}
+
+.work-detail-text th {
+  text-align: left;
+  width: 15%;
+}
+
+/* 応募フォーム */
+.form-item-wrapper th, .form-item-wrapper td {
+  border: 1px solid #ddd;
+  padding-left: 15px;
+}
+
+.form-item-wrapper tr {
+  line-height: 3.2rem;
+}
+
+.form-item-wrapper th {
+  width: 25%;
+  background: #FBF3F6;
+  vertical-align: top;
+}
+
+.form-item-wrapper td {
+  padding-right: 15px;
+}
+
+.form-item-wrapper td textarea {
+  margin: 15px 0;
+  vertical-align: middle;
+}
+
+/* input textの可変サイズ */
+.input-long {
+  width: 100%;
+}
+
+.separate-input-2 {
+  width: 40%;
+}
+
+.separate-input-3 {
+  width: 25%;
+}
+
+/* 米印 */
+.required {
+  color: #C30D23;
+}
+
+/* 送信ボタン */
+.submit-btn {
+  display: block;
+  width: 250px;
+  color: white;
+  font-size: 1.5rem;
+  line-height: 3rem;
+  margin: 0 auto;
+  background: #AF1653;
+  border: 2px solid #fff;
+  margin-top: 40px;
+}
+
+/* フッター */
+footer {
+  background: #AF1653;
+  color: white;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+}
+
+/* レスポンシブ対策 */
+/* 1024以下 */
+@media screen and (max-width: 1024px) {
+  /* fvのマージンをなくし、画像を全体表示 */
+  .fv-inner {
+    margin: 0;
+  }
+
+  /* ヘッダーのロゴと電話案内を縦表示 */
+  .header-inner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* 見出し/装飾調整 */
+  .text-decoration-left,.text-decoration-right {
+    margin: 0 25px;
+    transform: scale(3, 2);
+  }
+}
+
+/* 768以下 */
+@media screen and (max-width: 768px) {
+  .container {
+    overflow: hidden;
+  }
+  
+  /* コンテンツの幅をスマホ対応 */
+  .content-padding-lr {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .main-text {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+
+  .fv-inner {
+    height: 100vh;
+  }
+  /* 見出しの位置調整 */
+  .fv-inner-text {
+    transform: translateY(120px);
+  }
+
+  
+  /* フォントサイズ調整 */
+  .header-title {
+    font-size: 0.7rem;
+  }
+
+  .fv-title {
+    font-size: 1.4rem;
+  }
+
+  .fv-title span {
+    font-size: 2.5rem;
+  }
+
+  .fv-text {
+    font-size: 1rem;
+  }
+
+  .content-title {
+    font-size: 1.5rem;
+  }
+
+  .cp_q p {
+    font-size: 1rem;
+  }
+
+  figcaption p:nth-child(1) {
+    font-size: 1.4rem;
+  }
+
+  /* グリッドレイアウト調整 */
+  .school-images-inner {
+  padding: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  }
+
+  /* イベントのタイトルの幅調整 */
+  .event-contents-title-wrapper {
+    width: 100%;
+  }
+
+  /* イベントコンテンツのレイアウト変更 */
+  .content-inner{
+    display: block;
+    margin: 40px;
+  }
+
+  .event-text-wrapper {
+    position: static;
+    left: 0;
+    margin-top: 40px;
+  }
+
+  /* 勤務地レイアウト変更 */
+  .work-place-inner {
+    display: block;
+  }
+
+  /* 上勤務地 */
+  .work-place-img-border {
+    padding-bottom: 40px;
+    border-bottom: 2px solid #fff;
+    border-right: none;
+  }
+
+  /* 下勤務地 */
+  .work-place-img {
+    padding-top: 20px;
+  }
+
+  figcaption {
+    text-align: center;
+  }
+
+  /* 中央縦線消去 */
+  .work-place-img-border {
+    
+  }
+  
+
+  /* MAPボタン調整 */
+  .map-btn {
+    float: unset;
+    width: 100px;
+    margin: 0 auto;
+  }
+
+  /* 求人案内のボックス幅を調整 */
+  .work-detail-wrapper, .form-item-wrapper {
+    width: 90%;
+  }
+
+  /* 求人詳細レイアウト変更 */
+  .work-detail-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .work-detail-img-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .work-detail-img {
+  width: 45%;
+}
+  
+  /* 応募フォームレイアウト変更 */
+  .form-item-wrapper th, .form-item-wrapper td {
+    border-bottom: none;
+    display: block;
+    width: 100%;
+  }
+
+  /* 2セパレートのinput text */
+  .separate-input-2 {
+    width: 87%;
+  }
+  
+}
