@@ -1,7 +1,7 @@
+
 * {
   box-sizing: border-box;
 }
-
 
 body {
   font-family: Times, serif,
@@ -34,7 +34,7 @@ p {
   text-align: center;
 }
 
-/* コンテンツ左右共通 */ 
+/* コンテンツ左右共通余白*/ 
 .content-padding-lr {
   padding-left: 25%;
   padding-right: 25%;
@@ -62,23 +62,27 @@ th, td {
   background: #AF1653;
 }
 
+/* 横並び */
 .header-inner {
   padding: 5px 15%;
   display: flex;
   justify-content: space-around;
 }
 
+/* ロゴ画像を中央表示 */
 .header-logo {
   margin: auto 0;
 }
 
+/* 電話表示を縦均等に */
 .header-contact {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
 
-.header-contact p:nth-child(1) {
+/* 左右に線が入った文字 */
+.header-contact-text {
   font-size: 0.75rem;
 }
 
@@ -102,25 +106,28 @@ th, td {
 .header-contact-text::after {
     margin-left: 0.5rem;
 }
+/*  */
 
+/* 電話アイコン */
 .header-contact .tel-logo {
-  vertical-align: top;
+  vertical-align: top; /* アイコンの番号とのバランス */
   margin-right: 5px;
   width: 40px;
 }
 
+/* 電話番号 */
 .header-contact .tel-number {
   color: #AF1653;
   font-size: 1.7rem;
 }
 
+/* 黒い背景対応時間 */
 .header-contact p:last-child {
   color: #fff;
   font-size: 0.75rem;
   background: #000;
   padding: 1px 35px 1px 20px;
 }
-/*  */
 
 /* トップイメージ */
 .fv {
@@ -234,7 +241,6 @@ th, td {
   position: relative; 
 }
 
-
 .event-text-wrapper {
   min-width: 60%;
   position: absolute;
@@ -254,8 +260,6 @@ th, td {
 /* ここまでイベント */
 
 /* 勤務地 */
-
-
 /* 全体 */
 .work-place {
   background: url(img/bg_wine.png);
@@ -297,14 +301,10 @@ figcaption p:nth-child(1) {
   border-radius: 4px;
 }
 
+/* Q＆A */
 .qa-title {
   text-align: center;
   color: #AF1653;
-}
-
-.cp_qa *, .cp_qa *:after, .cp_qa *:before {
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
 }
 
 .cp_qa .cp_actab {
@@ -365,13 +365,13 @@ figcaption p:nth-child(1) {
 .cp_qa .cp_actab input:checked ~ .cp_actab-content {
 	max-height: 40em;
 }
+
 /* 質問をクリックした時の文字色変化 */
 .cp_qa .cp_actab input:checked ~ .cp_q {
 	color: #3E3A39;
 }
 
 /* 求人案内 */
-
 /* 全体 */
 .employer-apply {
   background: #344169;
@@ -484,11 +484,7 @@ footer {
 /* レスポンシブ対策 */
 /* 1024以下 */
 @media screen and (max-width: 1024px) {
-  /* fvのマージンをなくし、画像を全体表示 */
-  .fv-inner {
-    margin: 0;
-  }
-
+  
   /* ヘッダーのロゴと電話案内を縦表示 */
   .header-inner {
     flex-direction: column;
@@ -519,15 +515,14 @@ footer {
     padding-right: 10%;
   }
 
-
   .fv-inner {
     height: 100vh;
   }
+
   /* 見出しの位置調整 */
   .fv-inner-text {
     transform: translateY(120px);
   }
-
   
   /* フォントサイズ調整 */
   .header-title {
@@ -602,13 +597,7 @@ footer {
   figcaption {
     text-align: center;
   }
-
-  /* 中央縦線消去 */
-  .work-place-img-border {
-    
-  }
   
-
   /* MAPボタン調整 */
   .map-btn {
     float: unset;
@@ -634,7 +623,7 @@ footer {
 
   .work-detail-img {
   width: 45%;
-}
+  }
   
   /* 応募フォームレイアウト変更 */
   .form-item-wrapper th, .form-item-wrapper td {
@@ -647,5 +636,4 @@ footer {
   .separate-input-2 {
     width: 87%;
   }
-  
 }
