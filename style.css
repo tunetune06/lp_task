@@ -86,7 +86,7 @@ th, td {
   font-size: 0.75rem;
 }
 
-.header-contact-text {
+.header-contact-text { 
   display: flex;
   align-items: center;
 }
@@ -542,7 +542,7 @@ footer {
   }
 
   .content-title {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
   .cp_q p {
